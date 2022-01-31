@@ -1,4 +1,4 @@
-# RNSTarted
+# RNStarter
 
 A starting point for React native projects [https://facebook.github.io/react-native/].   
 
