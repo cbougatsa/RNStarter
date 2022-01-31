@@ -1,0 +1,48 @@
+{
+  "name": "rnstarter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "android:build": "cd ./android && ./gradlew bundleRelease",
+    "android:menu:open": "cd ./android && adb shell input keyevent 82",
+    "android:connect:device": "cd ./android && adb -s MVSNW19B05003616 reverse tcp:8081 tcp:8081",
+    "ios:build": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
+    "ios:pod:install": "npx pod-install ios",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.17",
+    "@react-native-community/netinfo": "^7.1.9",
+    "@react-navigation/native": "^6.0.7",
+    "@react-navigation/native-stack": "^6.3.0",
+    "axios": "^0.25.0",
+    "components": "^0.1.0",
+    "date-fns": "^2.28.0",
+    "react": "17.0.2",
+    "react-native": "0.67.1",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.2",
+    "react-native-splash-screen": "^3.3.0",
+    "react-native-toast-message": "^2.1.1",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
